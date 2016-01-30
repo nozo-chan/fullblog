@@ -1,0 +1,16 @@
+<h1>edit page </h1>
+
+<%=form_for User.new do |f| %>
+<p>
+<%=f.label :password, 'password'%>
+<%=f.text_field :password%>
+</p>
+<%=f.label :email, 'email'%>
+<%=f.text_field :email%>
+</p>
+
+<%=f.submit :update %>
+
+<%end%> 
+
+<%= link_to 'posts', posts_path %>
