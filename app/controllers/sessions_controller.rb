@@ -5,9 +5,6 @@ def new
 
 def create 
 	@user = User.find_by(email: params[:session][:email])
-	puts "==========================="
-	puts params[:session][:email]
-	puts "==========================="
 	if @user && @user.authenticate(params[:session][:password])
 		session[:current_user_id] = @user.id
 		redirect_to @user
