@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
 	def destroy
 		@user = User.find_by_id params[:id]
-		if user and user.destroy
+		if @user and @user.destroy
 			flash[:notice]='user destroyed succesfully'
 		else 
 			flash[:error]='there was a problem deleting the user'
